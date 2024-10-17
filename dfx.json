@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "dairy_backend": {
+      "main": "src/dairy_backend/main.mo",
+      "type": "motoko"
+    },
+    "dairy_frontend": {
+      "dependencies": [
+        "dairy_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/dairy_frontend/src/index.html"
+      },
+      "source": [
+        "src/dairy_frontend/assets",
+        "dist/dairy_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
