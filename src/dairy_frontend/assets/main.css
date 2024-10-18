@@ -1,37 +1,183 @@
-body {
-    font-family: sans-serif;
-    font-size: 1.5rem;
+.App {
+  position: static;
+  margin: 0px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 100%;
+  color: #496989;
+  background-color: #a8cd9f;
+  border-radius: 10px;
+  padding: 5px;
+}
+#title {
+  color: #a8cd9f;
+  background-color: #496989;
+}
+.active {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 300px;
+  height: 100%;
+
+  align-items: start;
+  margin: 30px auto 20px auto;
+  background: #e2f4c5;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form input,
+textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  background-color: #e2f4c5;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  overflow: hidden;
+}
+form button {
+  position: relative;
+  left: 180px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: #496989;
+  background-color: #e2f4c5;
+  border: 2px solid #496989;
+  outline: none;
+}
+button:hover {
+  background-color: #58a399;
+}
+.expand {
+  position: relative;
+  display: inline-block;
+  right: 100px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: #496989;
+  background-color: #e2f4c5;
+  border: 2px solid #496989;
+}
+.note-btn {
+  position: relative;
+  left: 200px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: #496989;
+  background-color: #e2f4c5;
+  border: 2px solid #496989;
+}
+.expand-show {
+  position: relative;
+  left: 90px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: #496989;
+  background-color: #e2f4c5;
+  border: 2px solid #496989;
+}
+#myCanvas {
+  background-color: aliceblue;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.Takescreenshot {
+  position: relative;
+  height: 50px;
+  border-radius: 20px;
+  color: #496989;
+  background-color: #e2f4c5;
+  border: 2px solid #496989;
+}
+.calculater {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 265px;
+  height: 300px;
+  justify-content: space-around;
+  align-items: start;
+  margin: 30px auto 20px auto;
+  background: #496989;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+.keyboard {
+  display: flex;
+  flex-direction: row;
 }
 
-img {
-    max-width: 50vw;
-    max-height: 25vw;
-    display: block;
-    margin: auto;
+.symbols {
+  width: 140px;
+  height: 150px;
 }
-
-form {
-    display: flex;
-    justify-content: center;
-    gap: 0.5em;
-    flex-flow: row wrap;
-    max-width: 40vw;
-    margin: auto;
-    align-items: baseline;
+div button:hover {
+  background-color: #58a399;
 }
-
-button[type="submit"] {
-    padding: 5px 20px;
-    margin: 10px auto;
-    float: right;
+.symbols button {
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  border-radius: 50%;
+  color: #496989;
+  background-color: #e2f4c5;
+  border: 2px solid #496989;
 }
-
-#greeting {
-    margin: 10px auto;
-    padding: 10px 60px;
-    border: 1px solid #222;
+.cal-screen {
+  height: 80px;
+  width: 250px;
+  background-color: aliceblue;
+  border-radius: 5px;
 }
+#cal-startwrite {
+  width: 65px;
+  height: 40px;
+  border-radius: 10px;
+}
+.FORM {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 300px;
+  height: 100%;
 
-#greeting:empty {
-    display: none;
+  align-items: start;
+  margin: 30px auto 20px auto;
+  background: #e2f4c5;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+.note-btn-add {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: #496989;
+  background-color: #e2f4c5;
+  border: 2px solid #496989;
+}
+.note-btn-E {
+  position: relative;
+  left: 100px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: #496989;
+  background-color: #e2f4c5;
+  border: 2px solid #496989;
+}
+span {
+  float: left;
 }
