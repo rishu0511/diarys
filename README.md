@@ -28,7 +28,6 @@ If you want to test your project locally, you can use the following commands:
 git clone
 # cd over the project
 cd diarys
-"
 # install all module
 npm install 
 ```
