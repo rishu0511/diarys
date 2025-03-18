@@ -91,7 +91,6 @@ export default function Calculater() {
         }))
       : null;
   }
-  console.log(new_numbers);
   const delete_element = useCallback(() => {
     var last = arr.length;
     setarr((prevalue) => {

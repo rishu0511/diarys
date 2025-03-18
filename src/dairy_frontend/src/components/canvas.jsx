@@ -1,6 +1,5 @@
 import CanvasF from "./Write.jsx";
 import React, { useRef, useState } from "react";
-import { useScreenshot, createFileName } from "use-react-screenshot";
 
 export default () => {
   const ref = useRef(null);

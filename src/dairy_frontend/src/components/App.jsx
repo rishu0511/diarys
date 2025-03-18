@@ -1,11 +1,11 @@
 import "../../assets/main.css";
-import React from "react";
-import { useState, createContext, useContext } from "react";
+import React, { useState } from "react";
 import Form from "./form.jsx";
 import Forme from "./forme.jsx";
 import Orders from "./orders.jsx";
 import Allorder from "./createorder.jsx";
 import Calculater from "./calculater.jsx";
+import Searchdiv from "./search.jsx";;
 
 export default function App() {
   const [ishidden, sethidden] = useState(false);
@@ -14,7 +14,6 @@ export default function App() {
   const [object, setobject] = useState([]);
   const [isedit, setedit] = useState(false);
   const [ids, setid] = useState(0);
-  const [obj, setobj] = useState({});
   const [Input, setInput] = useState({
     name: "",
     place: "",
@@ -37,31 +36,34 @@ export default function App() {
       });
     });
   }
+
   function deleteid(id) {
-    const Object = order.filter((item, index) => {
+    const eObjec = order.filter((item, index) => {
       return index === id;
     });
     setid(id);
-    setobject(Object);
+    setobject(eObjec);
     setedit(true);
     sethidden(false);
     setshow(false);
-    const obje = Object[0];
+    const obje = eObjec[0];
     const Name = obje.name;
     const Place = obje.place;
     const Amount = obje.amount;
     const Order = obje.order;
     const Totalamount = obje.totalamount;
-    setobj(obje);
     Input.name = Name;
     Input.place = Place;
     Input.amount = Amount;
     Input.totalamount = Totalamount;
     Input.order = Order;
-    console.log(Name);
-    console.log(Input);
+  }
+  function searchfinder() {
+    setshow(false);
+    sethidden(false);
   }
   function Expand() {
+    setshow(false);
     if (ishidden === false) {
       sethidden(true);
     } else if (ishidden === true) {
@@ -69,6 +71,7 @@ export default function App() {
     }
   }
   function Expandorder() {
+    sethidden(false);
     if (ishiddenshow === false) {
       setshow(true);
     } else if (ishiddenshow === true) {
@@ -90,6 +93,7 @@ export default function App() {
           Show orders
         </button>
       </div>
+      <Searchdiv ORDERS={order} SEARCHF={searchfinder} />
       {isedit ? (
         <Forme
           ADD={addorder}
@@ -99,11 +103,14 @@ export default function App() {
           ID={ids}
         />
       ) : null}
-      {ishidden ? <Form ADD={addorder} INPUT={Input} /> : null}
+      {ishidden ? <Form ADD={addorder} /> : null}
       {ishiddenshow ? (
         <Allorder SHOWID={deleteid} ORDER={order} DELETEID={deleteorder} />
       ) : null}
+
       <Calculater />
+  
     </div>
   );
 }
+
