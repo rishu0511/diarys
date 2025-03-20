@@ -107,7 +107,6 @@ export default function Calculater() {
     sethidden(true);
     setarr((t) => [" "]);
   }, [ishidden, arr]);
-
   const equalto = useCallback(() => {
     setgiveno(false);
     let index = new_numbers.indexOf(oprater);
